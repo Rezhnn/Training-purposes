@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!-- Declares HTML5 document type -->
+<html lang="en">
+<!-- Root element with language specification -->
+<head>
+    <!-- Document metadata -->
+    <meta charset="UTF-8">
+    <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsive viewport settings -->
+    <title>John Doe - Modern CV</title>
+    <!-- Page title visible in browser tab -->
+    
+    <!-- External Resources -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap 5 CSS framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome icons -->
+    
+    <!-- Custom CSS -->
+    <style>
+    /* CSS Custom Properties for theme management */
+    :root {
+        --primary-color: #4F46E5;    /* Main brand color */
+        --secondary-color: #F9FAFB;  /* Background color */
+        --accent-color: #EF4444;     /* Highlight color */
+        --text-color: #1F2937;       /* Primary text color */
+    }
+
+    /* Base document styling */
+    body {
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        /* Modern font stack */
+        color: var(--text-color);
+        /* Text color from CSS variable */
+        background-color: var(--secondary-color);
+        /* Page background */
+    }
+
+    /* Hero Section Styles */
+    .hero-section {
+        background: linear-gradient(135deg, var(--primary-color) 0%, #6366F1 100%);
+        /* Gradient background */
+        padding: 4rem 0;
+        /* Vertical padding */
+        margin-bottom: 3rem;
+        /* Space below header */
+    }
+
+    /* Profile Image Styling */
+    .profile-img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        /* Ensures image fills container */
+        border: 4px solid white;
+        border-radius: 50%;
+        /* Creates circle shape */
+        box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        /* Subtle shadow effect */
+    }
+
+    /* Reusable Card Component */
+    .cv-card {
+        background: white;
+        border: none;
+        border-radius: 1rem;
+        /* Rounded corners */
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        /* Card shadow */
+        transition: transform 0.2s;
+        /* Hover animation */
+    }
+    .cv-card:hover {
+        transform: translateY(-5px);
+        /* Lift effect on hover */
+    }
+
+    /* Skill Badge Component */
+    .skill-badge {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.5em 1em;
+        margin: 0.25rem;
+        border-radius: 50px;
+        /* Pill-shaped badges */
+        font-weight: 500;
+        transition: all 0.2s;
+    }
+    .skill-badge:hover {
+        background-color: var(--accent-color);
+        transform: scale(1.05);
+        /* Hover animation */
+    }
+
+    /* Timeline Layout System */
+    .timeline-item {
+        position: relative;
+        padding-left: 2rem;
+        margin-bottom: 2rem;
+    }
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 16px;
+        height: 16px;
+        background: var(--primary-color);
+        border-radius: 50%;
+        /* Timeline dot marker */
+    }
+
+    /* Contact Icon Styling */
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Centered icon container */
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container text-center text-white">
+            <!-- Bootstrap container with centered alignment -->
+            <img src="profile.jpg" alt="John Doe" class="profile-img rounded-circle mb-4">
+            <!-- Profile image with Bootstrap circle class -->
+            <h1 class="display-5 fw-bold mb-3">John Doe</h1>
+            <!-- Main heading with Bootstrap display class -->
+            <p class="lead mb-4">Senior Full Stack Developer</p>
+            <!-- Subheading with lead class -->
+            
+            <!-- Action Buttons -->
+            <div class="d-flex gap-3 justify-content-center">
+                <!-- Flex container with spacing -->
+                <a href="#" class="btn btn-light btn-sm rounded-pill px-4">
+                    <!-- Download button with pill shape -->
+                    <i class="fas fa-download me-2"></i>Download CV
+                </a>
+                <a href="#" class="btn btn-outline-light btn-sm rounded-pill px-4">
+                    <!-- Outline-style contact button -->
+                    <i class="fas fa-envelope me-2"></i>Contact
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="container">
+        <div class="row g-4">
+            <!-- Bootstrap row with gutter spacing -->
+            
+            <!-- Left Column (8/12 width on large screens) -->
+            <div class="col-lg-8">
+                <!-- Experience Card -->
+                <div class="cv-card p-4 mb-4">
+                    <h2 class="h4 mb-4 fw-bold text-primary">
+                        <i class="fas fa-briefcase me-2"></i>Experience
+                    </h2>
+                    <!-- Icon + text heading -->
+                    
+                    <!-- Timeline Item -->
+                    <div class="timeline-item">
+                        <h3 class="h5 mb-1">Senior Developer - Tech Corp</h3>
+                        <div class="text-muted small mb-2">2020 - Present</div>
+                        <!-- Date with muted text -->
+                        <ul class="list-unstyled">
+                            <!-- Unstyled list (Bootstrap) -->
+                            <li class="mb-2">✅ Led cross-functional team</li>
+                            <!-- List item with emoji -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education Card (similar structure to experience) -->
+            </div>
+
+            <!-- Right Column (4/12 width on large screens) -->
+            <div class="col-lg-4">
+                <!-- Contact Card -->
+                <div class="cv-card p-4 mb-4">
+                    <h2 class="h4 mb-4 fw-bold text-primary">
+                        <i class="fas fa-id-card me-2"></i>Contact
+                    </h2>
+                    <div class="d-flex gap-3 align-items-center mb-3">
+                        <!-- Flex layout for contact items -->
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <div class="small text-muted">Email</div>
+                            <!-- Muted label -->
+                            <div>john.doe@email.com</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Card -->
+                <div class="cv-card p-4 mb-4">
+                    <h2 class="h4 mb-4 fw-bold text-primary">
+                        <i class="fas fa-code me-2"></i>Skills
+                    </h2>
+                    <div class="d-flex flex-wrap">
+                        <!-- Flex container for skill badges -->
+                        <span class="skill-badge">React</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Required for Bootstrap interactive components -->
+</body>
+</html>
